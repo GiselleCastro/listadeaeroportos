@@ -3,6 +3,7 @@ import fs from 'fs'
 import path from 'path'
 import { levantarDadosICAOBrasil } from '../js/gerarJSONAeroportosBrasil.js'
 
+
 const aeroportosBrasileiros = new sqlite3.Database(path.resolve('.', 'database', 'aeroportosPublicosBrasil.db'))
 
 const inserirInDatabase = (iata_code, iso_country, iso_region, municipality, nome, type, cb) => {   
@@ -23,6 +24,8 @@ export const databaseAeroportosPublicosBrasil = async () => {
         }
     })
     console.info("Success! Brazilian airports data available!")
+    const JSONtemp = fs.readdirSync(path.resolve('.', 'database')).filter(ext => ext.includes(".JSON"))
+    JSONtemp.forEach(one => fs.rmSync(path.resolve('.', 'database', one)))
 }
 
 export const cities = (callback) => aeroportosBrasileiros.all(`SELECT iso_region, municipality from aeroportosBrasil`, callback)
