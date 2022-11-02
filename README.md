@@ -15,8 +15,7 @@ Ao iniciar a aplicação, será realizado o upload de informações sobre todos 
 Essas informaçãoes são armazenadas em um arquivo .JSON e, desse arquivo, são extraídas apenas informações dos aeroportos brasileiros para serem armazenados no banco de dados (SQLite). 
 
 Rotas:
-/flight - Página Inicial, lista de todos os aeroportos
-/flight/:ida/:volta - Percurso de ida e volta, onde o acesso se dá com o uso do código da Associação Internacional de Transporte Aéreo (IATA). Exemplos:
-
-/flight/BSB/FOR
-/flight/GRU/SSA
+- /flight - Página Inicial, lista de todos os aeroportos
+- /flight/:ida/:volta - Percurso de ida e volta, onde o acesso se dá com o uso do código da Associação Internacional de Transporte Aéreo (IATA). Exemplos:
+- /flight/BSB/FOR
+- /flight/GRU/SSA
