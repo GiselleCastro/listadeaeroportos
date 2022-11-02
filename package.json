@@ -14,6 +14,7 @@
     "data.js": "^0.12.11",
     "dotenv": "^16.0.1",
     "express": "^4.18.1",
+    "express-generator": "^4.16.1",
     "sqlite3": "^5.0.11"
   },
   "devDependencies": {
